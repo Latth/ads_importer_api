@@ -6,13 +6,14 @@ const mysql = require('mysql2');
 
 // Connect to mysql
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'latth_db'
+    host: 'alm-ads-importer-api-db-dropwapi.g.aivencloud.com',
+    user: 'avnadmin',
+    password: 'AVNS_LpvDV0xUtwY6IvQ7ICf',
+    database: 'defaultdb',
+    port: 17621
 });
 
-app.use(ecxpress.json());
+app.use(express.json());
 
 // Check API
 
