@@ -4,23 +4,6 @@ const port = process.env.PORT || 3000;
 
 const mysql = require('mysql2');
 
-// Connect to mysql
-const db = mysql.createConnection({
-    host: 'alm-ads-importer-api-db-dropwapi.g.aivencloud.com',
-    user: 'avnadmin',
-    password: 'AVNS_LpvDV0xUtwY6IvQ7ICf',
-    database: 'defaultdb',
-    port: 17621
-});
-
-db.connect((error) => {
-    if (error) {
-        console.log(error);
-    } else {
-        console.log('MySQL Connected...');
-    }
-});
-
 app.use(express.json());
 
 // Check API
