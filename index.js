@@ -16,7 +16,6 @@ const db = mysql.createConnection({
 app.use(express.json());
 
 // Check API
-
 app.get('/', (req, res) => {
   res.json({ message: 'API Working', status: true,});
 });
