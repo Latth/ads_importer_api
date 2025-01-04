@@ -13,6 +13,14 @@ const db = mysql.createConnection({
     port: 17621
 });
 
+db.connect((error) => {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log('MySQL Connected...');
+    }
+});
+
 app.use(express.json());
 
 // Check API
