@@ -1,0 +1,29 @@
+# fly.toml app configuration file generated for ads-importer-api-summer-darkness-7015 on 2025-01-04T15:32:28+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'ads-importer-api-summer-darkness-7015'
+primary_region = 'waw'
+
+[build]
+  image = 'mysql:8'
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[env]
+  DB_CONNECTION = "mysql"
+  DB_HOST = "alm-ads-importer-api-db-dropwapi.g.aivencloud.com"
+  DB_PORT = "17621"
+  DB_DATABASE = "defaultdb"
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
